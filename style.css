@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: rgb(78, 200, 200);
+}
+.bg{
+    /* scale: .8; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: all cubic-bezier(0.19,1,0.22,1) .5s;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    /* background-color: gray; */
+    margin: 0 auto;
+}
+nav .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .links a{
+    margin-left: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: .5;
+    font-weight: 700;
+}
+nav .links i{
+    font-size: 25px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+nav .links a:nth-child(2){
+    opacity: .3;
+}
+
+.sections{
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: white;
+    display: flex;
+}
+.left{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left .line1{
+    width: 80px;
+    height: 3px;
+    background-color: black;
+}
+.left h4{
+    font-size: 50px;
+    margin-top: 5px;
+}
+.left h1{
+    font-size: 100px;
+    margin-top: 17px;
+}
+.left h5{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+.left .lblue{
+    opacity: .5;
+    color: lightseagreen;
+}
+.contact p{
+    font-size: 16px;
+    color: lightseagreen;
+}
+.contact h6{
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+}
+.left .texts{
+    padding-top: 40px;
+}
+
+.right{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+.wrapper{
+    width: 600px;
+    height: 100px;
+    /* background-color: gray; */
+    overflow: hidden;
+}
+.wrapper .ele{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 25px;
+}
+
+
+.wrapper .ele:nth-child(1){
+    animation: a 1s cubic-bezier(0.19, 1, 0.22, 1) .3s both;
+}
+.wrapper .ele:nth-child(2){
+    animation: a 1s cubic-bezier(0.19, 1, 0.22, 1) 1.7s both;
+}
+.wrapper .ele:nth-child(3){
+    animation: a 1s cubic-bezier(0.19, 1, 0.22, 1) 3s both;
+}
+.wrapper .ele:nth-child(4){
+    animation: a 1s cubic-bezier(0.19, 1, 0.22, 1) 4.5s both;
+}
+.wrapper .ele:nth-child(5){
+    animation: a 1s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+}
+
+@keyframes a{
+    to{
+        margin-top: -100px;
+    }
+}
+
+.loader{
+    animation: b 6s cubic-bezier(0.19, 1, 0.22, 1) 4.8s both;
+}
+@keyframes b{
+    to{
+        margin-top: -100%;
+    }
+}
+
+.loader .wrapper{
+    letter-spacing: 5px;
+}
+.wrapper .webdev{
+    opacity: 0.5;
+}
+
+.btxt{
+    padding: 0;
+    margin: 0;
+    font-size: 169px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 12px;
+}
+
+.btxt .odd{
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    background: url(./back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.btxt .even{
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    background: url(./back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: front 20s linear infinite;
+}
+@keyframes front{
+    100%{
+        background-position: -2000px 0;
+    }
+}
